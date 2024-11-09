@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+
+<div class="bg_green rectangle-text text-white mb-4">
+   <h1>Bienvenue {{ app.user.prenom }}</h1>
+</div>
+
+{% if is_granted('ROLE_ADMIN') %}
+{{ include('dashboard/buttons_admin.html.twig') }}
+{{ include('dashboard/compteur.html.twig') }}
+{% endif %}
+
+{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_VETO') %}
+{{ include('dashboard/rapportsvet.html.twig') }}
+{% endif %}
+
+{% if is_granted('ROLE_VETO') %} 
+{{ include('dashboard/form-rapportsvet.html.twig') }}
+{{ include('dashboard/view-nourriture.html.twig') }}
+{% endif %}
+
+{% if is_granted('ROLE_EMPLOYEE') %} 
+{{ include('dashboard/buttons_employee.html.twig') }}
+{{ include('dashboard/gestion-avis.html.twig') }}
+{{ include('dashboard/gestion-messages.html.twig') }}
+{{ include('dashboard/form-nourriture.html.twig') }}
+{% endif %}
+
+{% endblock %}

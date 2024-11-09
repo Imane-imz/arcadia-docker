@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les animaux du zoo{% endblock %}
+
+{% block content %}
+
+<div class="text-center m-4">
+    <h1>Les habitats du zoo Arcadia</h1>
+
+    <div class="container">
+        <div class="row">
+        {% for habitat in habitats %}
+            <div class="col-12 col-md-6 col-lg-4 p-3">
+                <div class="card">
+                    <img src="{{ asset('uploads/habitats/images/' ~ habitat.image) }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h4 class="mb-1">{{ habitat.nom }}</h4>
+                            <a href="{{ path('app_admin_habitat_show', {id: habitat.id}) }}" class="btn bg_primary text-white m-2">Voir les animaux des {{ habitat.nom }}</a>
+                        </div>
+                </div>
+            </div>
+                {% else %}
+                <p>Aucun enregistrement en base de données.</p> 
+            {% endfor %}
+        </div>
+    </div>
+
+    <div>
+        <a class="btn bg_primary text-white m-4" href="habitat/new">Ajouter un nouvel habitat</a>
+    </div>
+
+</div>
+{% endblock %} 

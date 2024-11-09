@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des services{% endblock %}
+
+{% block content %}
+
+<div class="text-center m-4">
+    <h1>Les services du zoo Arcadia</h1>
+
+    <div class="container">
+        <div class="row">
+        {% for service in services %}
+            <div class="col-12 col-md-6 col-lg-4 p-3">
+                <div class="card">
+                    <img src="{{ asset('uploads/services/' ~ service.image) }}" class="image-card" alt="...">
+                        <div class="card-body">
+                            <h4 class="mb-1">{{ service.nom }}</h4>
+                            <a href="{{ path('app_admin_service_show', {id: service.id}) }}" class="btn bg_primary text-white m-2">En savoir plus</a>
+                        </div>
+                </div>
+            </div>
+                {% else %}
+                <p>Aucun enregistrement en base de données.</p> 
+            {% endfor %}
+        </div>
+    </div>
+
+    {% if is_granted('ROLE_ADMIN') or is_granted('ROLE_EMPLOYEE') %}
+    <div>
+        <a class="btn bg_primary text-white m-4" href="service/new">Ajouter un nouveau service</a>
+    </div>
+    {% endif %}
+
+</div>
+{% endblock %}

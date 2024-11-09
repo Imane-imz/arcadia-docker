@@ -1,0 +1,22 @@
+<section>
+    <div class="bg_dark text-white">
+        <div class="container text-center">
+            <div>
+                <h1 class="m-4 p-4">Gérer les avis</h1>
+            </div>
+            <div>
+                <ul class="p-2 m-2">
+                 {% for avis in avis %}
+                    {{ include('avis/item.html.twig') }}
+                    
+                 {% else %}
+                    <p>Aucun enregistrement en base de données.</p> 
+                {% endfor %}
+                </ul>
+                <div>
+                    <p class="pb-4"><a class="color-secondary" href="#">Afficher la suite...</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

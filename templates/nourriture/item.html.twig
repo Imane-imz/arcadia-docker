@@ -1,0 +1,37 @@
+<li class="row border-bottom">
+    <div class="col">
+        <p> {{ nourriture.animal }}</p>
+    </div>
+    <div class="col">
+        <button class="btn bg_primary text-white mt-2" type="button" data-bs-toggle="modal" data-bs-target="#nourriture-modal-{{ nourriture.id }}">Ouvrir</button>
+    </div>
+        
+
+        <!-- Modal -->
+        <div class="modal fade text-black" id="nourriture-modal-{{ nourriture.id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header row">
+                <h1 class="col modal-title fs-5 text-center" id="exampleModalLabel"> {{ nourriture.animal }}</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-start col">
+                <div class="row">
+                    Date : {{ nourriture.date|date('d/m/Y') }} 
+                </div>
+                <div class="row">
+                    Nourriture donnée : {{ nourriture.nourriture }}
+                </div>
+                <div class="row">
+                    Quantité : {{ nourriture.quantite }} gr
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                
+            </div>
+            </div>
+        </div>
+        </div>
+    
+</li>

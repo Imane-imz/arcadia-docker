@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% set action = app.current_route == 'app_avis_new' ? 'Ajout' : 'Édition' %}
+
+{% block title %}Nouvel Avis{% endblock %}
+
+{% block content %}
+
+    <div class="w-50 m-auto">
+        <div class="example-wrapper">
+            <h1 class="d-flex justify-content-center">Laisser un avis</h1>
+                
+                    {{ form_start(form, {'attr': {'enctype': 'multipart/form-data'}}) }}
+                        {{ form_row(form.pseudo, {label: 'Pseudo'}) }}
+                        {{ form_row(form.avis, {label: 'Votre Avis'}) }}
+                        {{ form_row(form.confirmation) }}
+                    {{ form_widget(form) }}
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn bg_primary text-white">Valider</button>
+                    </div>
+                    {{ form_end(form) }}
+                 
+           
+        </div>
+    </div>
+{% endblock %}

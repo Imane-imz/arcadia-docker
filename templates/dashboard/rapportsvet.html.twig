@@ -1,0 +1,25 @@
+<section>
+    <div class="bg_dark text-white">
+        <div class="container text-center">
+            <div>
+                <h1 class="m-4 p-4">Rapports Vétérinaire</h1>
+            </div>
+            <div>
+                <button class="btn bg_primary text-white text-end p-2 m-2" type="button">Trier par</button>
+            </div>
+            <div>
+                <ul class="p-2 m-2">
+                 {% for rapportveterinaire in rapportveterinaires %}
+                    {{ include('rapport_vet/item.html.twig') }}
+                    
+                 {% else %}
+                    <p>Aucun enregistrement en base de données.</p> 
+                {% endfor %}
+                </ul>
+                <div>
+                    <p class="pb-4"><a class="color-secondary" href="#">Afficher la suite...</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% set action = app.current_route == 'app_message_new' ? 'Ajout' : 'Édition' %}
+
+{% block title %}{{ action }} de messages{% endblock %}
+
+{% block content %}
+
+<div class="w-50 m-auto m-4">
+    <div class="example-wrapper">
+        <h1 class="d-flex justify-content-center">Nouveau Message</h1> 
+            {{ form_start(form, {'attr': {'enctype': 'multipart/form-data'}}) }}
+                {{ form_row(form.email, {label: 'Adresse email'}) }}
+                {{ form_row(form.message, {label: 'Votre message'}) }}
+                {{ form_row(form.confirmation) }}
+            {{ form_widget(form) }}
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn bg_primary text-white">Envoyer votre message</button>
+            </div>
+            {{ form_end(form) }}
+    </div>
+</div>
+{% endblock %}

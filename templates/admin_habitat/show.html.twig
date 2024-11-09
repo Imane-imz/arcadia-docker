@@ -1,0 +1,131 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Les animaux de l'{{ habitat.nom }}{% endblock %}
+
+{% block content %}
+
+<img src="{{ asset('uploads/habitats/' ~ habitat.image) }}" alt="{{ habitat.nom }}" style="width:100%; height:300px">
+
+<div class="container text-center p-4">
+    <h6>{{ habitat.description }}</h6>
+</div>
+
+<h2 class="text-center p-4 bg_dark text-white">Animaux de l'{{ habitat.nom }}</h2>
+
+<div>
+    {% if is_granted('ROLE_ADMIN') %}
+        <div class="text-center">
+            <a class="btn bg_primary text-white m-4" href="../animal/new">Ajouter un nouvel animal</a>
+        </div>
+    {% endif %}
+</div>
+
+<div>
+    {% for animal in habitat.getAnimals %}
+
+        <div class="row border-bottom">
+            <div class="col text-center position-relative">
+                <img src="{{ asset('uploads/habitats/images/' ~ animal.image) }}" class="card-img-top btn img-fluid animal-add-view-count-button" alt="..." style="height:300px; width:600px" 
+                data-bs-toggle="modal" data-bs-target="#animal-modal-{{ animal.id }}" data-add-view-count-url="/admin/animal/{{ animal.id }}/add_view_count">
+                <div class="position-absolute top-50 start-50 text-white text-center glassmorphism" style="font-size: 1.5rem; padding: 0.5rem;">
+                    {{ animal.prenom }}
+                </div>
+            </div>
+        
+
+            <!-- Modal -->
+            <div class="modal fade text-black" id="animal-modal-{{ animal.id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header row">
+                            <h1 class="col modal-title fs-3 text-center" id="exampleModalLabel"> {{ animal.prenom }}</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-start col">
+                            <div class="row border-bottom">
+                                <!-- Affiche l'image au lieu du nom du fichier -->
+                                <img src="{{ asset('images/' ~ animal.image) }}" alt="{{ animal.prenom }}" class="img-fluid" style="max-height: 300px; width: 100%;">
+                            </div>
+                            <div class="row border-bottom">
+                                Prénom de l'animal : {{ animal.prenom }}
+                            </div>
+                            <div class="row border-bottom">
+                                {# Race : {{ animal.getRaceLabel }} #} 
+                            </div>
+                            <div class="row border-bottom">
+                                Habitat : {{ animal.habitatReel }} 
+                            </div>
+                            <div class="row border-bottom">
+                                État général : {{ animal.etat }}
+                            </div>
+                            <div class="row">
+                                Nourriture : {{ animal.nourritureGlobale }}
+                            </div>
+                            <div class="row">
+                                Nombre de vues : <span class="view-count-data">{{ animal.viewCount }}</span>
+                            </div>
+                        </div>
+                        <div class="modal-footer text-center">
+                            <button type="button" class="btn btn-secondary text-center" data-bs-dismiss="modal">Fermer</button>
+                            {% if is_granted('ROLE_ADMIN') or is_granted('ROLE_EMPLOYEE') %}
+                            <a href="{{ path('app_admin_animal_edit', {id: animal.id}) }}" class="btn bg_green text-white m-2">Éditer</a>
+
+                            <form action="{{ path('app_admin_animal_delete', {'id': animal.id}) }}" method="post" style="display:inline;">
+                                <input type="hidden" name="_method" value="DELETE"> <!-- Ce champ force la méthode DELETE -->
+                                <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ animal.id) }}">
+                                <button type="submit" class="btn btn-danger" onclick="return confirm('Êtes-vous sûr.e de vouloir supprimer cet animal ?');">
+                                    Supprimer
+                                </button>
+                            </form>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    {% else %}
+        <li>Aucun animal dans cet habitat.</li>
+    {% endfor %}
+</div>
+
+<div class="text-center">
+    {% if is_granted('ROLE_ADMIN') %}
+    <a href="{{ path('app_admin_habitat_edit', {id: habitat.id}) }}" class="btn bg_green text-white m-2">Éditer</a>
+    {% endif %}
+</div>
+
+<div class="text-center">
+    <a href="{{ path('app_admin_habitat_index') }}" class="btn bg_primary text-white m-2">Retour à la liste des habitats</a>
+</div>
+
+
+<script>
+    let buttons = document.querySelectorAll('.animal-add-view-count-button')
+    buttons.forEach(element => {
+        let url = element.getAttribute('data-add-view-count-url')
+
+        element.addEventListener('click', async () => {
+            let modal = document.querySelector(element.getAttribute('data-bs-target'))
+            let countViewSpan = modal.querySelector(".view-count-data")
+            let viewCount = parseInt(countViewSpan.innerText) 
+            viewCount++ 
+            countViewSpan.innerHTML = viewCount
+            
+            
+            try {
+                await fetch(url, {
+                    method:'PATCH',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-Requested-With': 'XMLHttpRequest' // Important pour Symfony
+                    }
+                })
+            } catch (error) {
+                console.error(error)
+            }
+        })
+        
+    })
+</script>
+{% endblock %}

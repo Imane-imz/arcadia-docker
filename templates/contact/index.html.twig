@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% set action = app.current_route == 'app_contact' ? 'Ajout' : 'Édition' %}
+
+{% block title %}{{ action }} contact{% endblock %}
+
+{% block content %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+    <div class="w-50 m-auto">
+        <div class="example-wrapper">
+            <h1 class="d-flex justify-content-center">Contacter le zoo</h1>
+                <form enctype="multipart/form-data">
+                    {{ form_start(form) }}
+                    {{ form_row(form.titre, {label: 'Titre'}) }}
+                    {{ form_row(form.description, {label: 'Votre message'}) }}
+                    {{ form_row(form.email, {label: 'Votre adresse email'}) }}
+                    {{ form_row(form.confirmation) }}
+                    {{ form_widget(form) }}
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn bg_primary text-white">Contacter le zoo</button>
+                    </div>
+                    {{ form_end(form) }}
+                </form> 
+           
+        </div>
+    </div>
+{% endblock %}

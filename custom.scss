@@ -1,0 +1,12 @@
+// Import Bootstrap's functions and variables
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+
+// Redefine Bootstrap's color variables
+$primary: #A65005; // Remplacez cette couleur par votre couleur primaire
+$secondary: #D9B29C; // Remplacez cette couleur par votre couleur secondaire
+$dark: #768C56; // Remplacez cette couleur par votre couleur dark
+$black: #415936; // Remplacez cette couleur par votre couleur black
+
+// Import Bootstrap's rest of the framework
+@import "node_modules/bootstrap/scss/bootstrap";

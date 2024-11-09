@@ -1,0 +1,344 @@
+@import url("/node_modules/bootstrap-icons/font/bootstrap-icons.css");
+ @import 'custom';
+ 
+ @media only screen and (max-width: 600px) {
+    /* Styles pour les petits écrans */
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .navbar {
+        display: block;
+        text-align: center;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), 
+       only screen and (-o-min-device-pixel-ratio: 2/1), 
+       only screen and (min-resolution: 192dpi) {
+    /* Pour écrans Retina */
+    .logo {
+        background-size: contain;
+    }
+
+    .high-res-image {
+        width: 100px;
+        height: 100px;
+        background-size: cover;
+    }
+}
+
+
+html {
+	 position: relative;
+	 min-height: 100%;
+}
+
+.btn:hover {
+	background-color: #415936;
+}
+
+section {
+    padding: 0;
+}
+
+ img {
+	 object-fit: cover;
+	 max-width: 100%;
+}
+ main {
+	 margin-bottom: 170px;
+     min-height: 60vh;
+}
+ .bg_primary {
+	 background-color: #a65005;
+}
+
+.bg_dark {
+	background-color: #415936;
+}
+
+.color-primary {
+	color: #a65005;
+}
+
+.color-secondary {
+	color: #D9B29C;
+}
+
+
+.bg_green {
+    background-color:#768c56
+}
+
+.bg_light {
+	background-color: rgb(181, 181, 181);
+}
+
+.compteur {
+	--bs-progress-height: 1.7rem;
+    --bs-progress-font-size: 16px;
+	--bs-progress-bg: #e9ecef;
+    --bs-progress-border-radius: 0.375rem;
+    --bs-progress-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+    --bs-progress-bar-color: #fff;
+    --bs-progress-bar-bg: #0d6efd;
+    --bs-progress-bar-transition: width 0.6s ease;
+    display: flex;
+    height: var(--bs-progress-height);
+    overflow: auto;
+    font-size: var(--bs-progress-font-size);
+	background-color: var(--bs-progress-bg);
+    border-radius: var(--bs-progress-border-radius);
+}
+
+.image-card {
+	height: 300px;
+	width: 600px;
+	object-fit: cover;
+	object-position: top;
+}
+
+.image-show {
+	height: 400px;
+	width: 700px;
+	object-fit: cover;
+	object-position: 50% 20%;
+}
+
+.masthead {
+    height: 70vh;
+    min-height: 500px;
+    background-image: url("../images/Lion.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0 0 25rem 0;
+  }
+
+.habitats {
+	height: 70vh;
+    min-height: 500px;
+    background-image: url("../images/Elephants.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0 0 25rem 0;
+}
+
+.habitats-terrestres {
+	height: 70vh;
+    min-height: 500px;
+    background-image: url("../images/HabitatTerrestreSuricate.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0 0 25rem 0;
+}
+
+.habitats-aquatiques {
+	height: 70vh;
+    min-height: 500px;
+    background-image: url("../images/HabitatAquatique.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0 0 25rem 0;
+}
+
+.habitats-aeriens {
+	height: 70vh;
+    min-height: 500px;
+    background-image: url("../images/HabitatAerien.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0 0 25rem 0;
+}
+
+
+.presentation {
+    padding: 3rem;
+}
+
+.glassmorphism {
+    background: rgba(122, 122, 122, 0.3);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(4.1px);
+	-webkit-backdrop-filter: blur(4.1px);
+}
+
+  nav img {
+    width: 150px;
+  }
+
+ .rectangle-text {
+	 padding-top: 46px;
+	 padding-bottom: 46px;
+	 align-self: stretch;
+	 display: flex;
+	 justify-content: center;
+}
+
+.rectangle-text a {
+    text-decoration: none;
+}
+
+ 
+ footer.footer {
+	 padding: 15px;
+	 position: absolute;
+	 bottom: 0;
+	 width: 100%;
+}
+ p {
+	 font-family: "Roboto", sans-serif;
+	 font-size: 16px;
+	 margin-top: 15px;
+}
+ h1 {
+	 font-family: "Crimson Text", serif;
+	 font-size: 48px;
+}
+ h2 {
+	 font-family: "Crimson Text", serif;
+}
+ a {
+	 color: #768c56;
+}
+ .avis-scene {
+	 position: relative;
+	 margin-bottom: 15px;
+}
+ .avis-scene::before {
+	 content: "";
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 width: 100%;
+	 height: 100%;
+	 background-image: url(../images/ZooPerson2.jpg);
+	 background-size: cover;
+	 filter: brightness(0.6);
+}
+ .avis-scene * {
+	 position: relative;
+}
+ .avis-scene .avis-scene-content {
+	 height: 600px;
+	 display: flex;
+	 flex-direction: column;
+	 align-items: center;
+	 justify-content: center;
+}
+ .image-lion {
+	 background-image: url(../images/Lion.jpg);
+}
+ .hero-scene {
+	 position: relative;
+	 margin-bottom: 15px;
+}
+ .hero-scene::before {
+	 content: "";
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 width: 100%;
+	 height: 100%;
+	 background-size: cover;
+	 filter: brightness(0.6);
+}
+ .hero-scene * {
+	 position: relative;
+}
+ .hero-scene .hero-scene-content {
+	 height: 600px;
+	 display: flex;
+	 flex-direction: column;
+	 align-items: center;
+	 justify-content: center;
+}
+ .text-hero-scene {
+	 margin-top: 25px;
+}
+ .button-hero-scene {
+	 margin-top: 200px;
+}
+/* .text-justify {
+	 text-align: justify;
+	 text-align: center;
+}
+ */
+ .button-home {
+	 height: 120px;
+	 width: 200px;
+	 margin-top: 10px;
+	 margin-bottom: 10px;
+	 margin-right: 10px;
+}
+ .button-home:hover {
+	 transition: all(0.3);
+	 background-color: #a65005;
+	 color: #415936;
+}
+ .container-btn {
+	 display: flex;
+	 justify-content: center;
+}
+ .form-label {
+	 color: #768c56;
+}
+ .hab-ter-scene {
+	 position: relative;
+	 margin-bottom: 15px;
+}
+ .hab-ter-scene::before {
+	 content: "";
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 width: 100%;
+	 height: 100%;
+	 background-image: url(../images/HabitatTerrestreSuricate.jpg);
+	 background-size: cover;
+	 filter: brightness(0.6);
+}
+ .hab-ter-scene * {
+	 position: relative;
+}
+ .hab-ter-scene .hero-scene-content {
+	 height: 600px;
+	 display: flex;
+	 flex-direction: column;
+	 align-items: center;
+	 justify-content: center;
+}
+
+.titre-image {
+	color: black;
+}
+
+.btn_dashboard {
+	background-color: #a65005;
+	color: white;
+	height: 100px;
+	width: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+ 

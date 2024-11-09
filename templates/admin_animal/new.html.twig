@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% set action = app.current_route == 'app_admin_animal_new' ? 'Ajout' : 'Édition' %}
+
+{% block title %}{{ action }} d'animaux{% endblock %}
+
+{% block content %}
+
+    <div class="w-50 m-auto">
+        <div class="example-wrapper">
+            <h1 class="d-flex justify-content-center">Ajout d'un nouvel animal</h1>
+                
+                    {{ form_start(form, {'attr': {'enctype': 'multipart/form-data'}}) }}
+                        {{ form_row(form.prenom, {label: 'Prénom de l\'animal'}) }}
+                        {{ form_row(form.race, {label: 'Race de l\'animal'}) }}
+                        {{ form_row(form.habitat, {label: 'Habitat de l\'animal'}) }}
+                        {{ form_row(form.habitatReel, {label: 'Nom spécifique de l\'habitat'}) }}
+                        {{ form_row(form.etat, {label: 'État général de l\'animal'}) }}
+                        {{ form_row(form.nourritureGlobale, {label: 'Nourriture de l\'animal'}) }}
+                         {{ form_row(form.image) }}
+                        {{ form_row(form.confirmation) }}
+                    {{ form_widget(form) }}
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn bg_primary text-white">Valider</button>
+                    </div>
+                    {{ form_end(form) }}
+                 
+           
+        </div>
+    </div>
+{% endblock %}

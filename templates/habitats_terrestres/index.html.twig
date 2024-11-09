@@ -1,0 +1,259 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HabitatsTerrestresController!{% endblock %}
+
+{% block content %}
+
+ <!-- Header-->
+<header class="habitats-terrestres d-flex justify-content-center">
+    <div class="w-50 h-100">
+        <div class="row h-100 align-items-center">
+        <div class="col-12 text-center text-light glassmorphism p-2">
+            <p class="lead">Découvrez les animaux des habitats terrestres du</p>
+            <h1 class="fw-light">Zoo Arcadia</h1>
+        </div>
+        </div>
+    </div>
+</header>
+
+<section class="bg-light text-center">
+    <div class="rectangle-text bg_dark">
+        <h1 class="text-white">Les animaux des habitats terrestres du zoo</h1>
+    </div>
+</section>
+
+<div class="container text-center">
+
+    <p class="d-inline-flex gap-1">
+        <a class="btn" data-bs-toggle="collapse" href="#lions" role="button" aria-expanded="false" aria-controls="lions">
+            <img src="{{ asset('images/CoupleLions.jpg')}}" class="rounded w-100 img-fluid" style="object-fit: cover; max-height: 250px;"/>
+        </a>
+        <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#tigres" aria-expanded="false" aria-controls="tigres">
+            <img src="{{ asset('images/CoupleTigres.jpg')}}" class="rounded w-100 img-fluid" style="object-fit: cover; max-height: 250px;"/>
+        </button>
+        <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#elephants" aria-expanded="false" aria-controls="elephants">
+            <img src="{{ asset('images/CoupleElephants.jpg')}}" class="rounded w-100 img-fluid" style="object-fit: cover; max-height: 250px;"/>
+        </button>
+    </p>
+
+    <div class="row">
+        <div class="container">
+            <div class="collapse multi-collapse" id="lions">
+                <h3 class="bg_green text-white p-4">Nos lions</h3>
+                <div class="card card-body bg_dark text-white">
+
+                    <div class="image-card">
+                        <img src="{{ asset('images/Leo.jpg')}}" class="rounded w-100" style="max-width: 300px; max-height: 200px"/>
+                        <h3 class="titre-image text-white">Léo</h3>
+                        <div class="">
+                            <p>Lion d'Afrique</br>
+                            Savanne</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">État de l'animal</h3>
+                            <p>Léo a 4 ans et se porte à merveille.</br>
+                                Il est très actif, très joueur et adore taquiner</br>
+                                sa chère et tendre, Léa.</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Nourriture</h3>
+                            <p>Carnivore : zèbres, gnous, girafes, antilopes, phacochères.</br>
+                                Parfois des buffles ou de jeunes pachydermes.</br>
+                                Petites proies pour les chasseurs solitaires.</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Dernière date de passage du vétérinaire :</h3>
+                            <p>Le 22/07/2024</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Avis du vétérinaire :</h3>
+                            <p>Léo se porte très bien.</br>
+                                Son régime alimentaire lui convient parfaitement.</br>
+                                Il est physiquement en grande forme.</br>
+                                Il ne nécessite aucun soin particulier.</p>
+                        </div></hr>
+                    </div>
+
+
+
+                    <div class="image-card text-white">
+                        <img src="{{ asset('images/Lea.jpg')}}" class="rounded w-100" style="max-width: 300px; max-height: 200px;"/>
+                        <h3 class="titre-image text-white">Léa</h3>
+                        <p>Lion d'Afrique</br>
+                        Savanne</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">État de l'animal</h3>
+                            <p>Léa a 3 ans et est en très bonne santé.</br>
+                                Elle attend un très heureux événement,</br>
+                                le premier petit lionceau du Zoo Arcadia !</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Nourriture</h3>
+                            <p>Carnivore : zèbres, gnous, girafes, antilopes, phacochères.</br>
+                                Parfois des buffles ou de jeunes pachydermes.</br>
+                                Petites proies pour les chasseurs solitaires.</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Dernière date de passage du vétérinaire :</h3>
+                            <p>Le 22/07/2024</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Avis du vétérinaire :</h3>
+                            <p>Léa est en forme.</br>
+                                Son régime alimentaire lui convient parfaitement.</br>
+                                Sa grossesse se déroule très bien</br>
+                                et elle est très surveillée.</p>
+                        </div></hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="collapse multi-collapse" id="tigres">
+                <h3 class="bg_green text-white p-4">Nos tigres</h3>
+                <div class="card card-body bg_dark text-white">
+
+                    <div class="image-card">
+                        <img src="{{ asset('images/Tigro.jpg')}}" class="rounded w-100" style="max-width: 300px; max-height: 200px"/>
+                        <h3 class="titre-image text-white">Tigro</h3>
+                        <div class="">
+                            <p>Tigre de Sumatra</br>
+                            Jungle</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">État de l'animal</h3>
+                            <p>Tigro a 4 ans et se porte à merveille.</br>
+                                Il est très actif, très joueur et adore taquiner</br>
+                                sa chère et tendre, Tigra.</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Nourriture</h3>
+                            <p>Carnivore : essentiellement cervidés et sangliers.</br>
+                                A l’occasion, tapirs ou petites proies </br>
+                                (singes, porcs-épics, mangoustes, oiseaux, poissons)</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Dernière date de passage du vétérinaire :</h3>
+                            <p>Le 22/07/2024</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Avis du vétérinaire :</h3>
+                            <p>Tigro se porte très bien.</br>
+                                Son régime alimentaire lui convient parfaitement.</br>
+                                Il est physiquement en grande forme.</br>
+                                Il ne nécessite aucun soin particulier.</p>
+                        </div></hr>
+                    </div>
+
+                    <div class="image-card">
+                        <img src="{{ asset('images/Tigra.jpg')}}" class="rounded w-100" style="max-width: 300px; max-height: 200px"/>
+                        <h3 class="titre-image text-white">Tigra</h3>
+                        <div class="">
+                            <p>Tigre de Sumatra</br>
+                            Jungle</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">État de l'animal</h3>
+                            <p>Tigra a 3 ans et est en très bonne santé.</br>
+                                Elle attend un très heureux événement,</br>
+                                le premier petit tigreau du Zoo Arcadia !</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Nourriture</h3>
+                            <p>Carnivore : essentiellement cervidés et sangliers.</br>
+                                A l’occasion, tapirs ou petites proies </br>
+                                (singes, porcs-épics, mangoustes, oiseaux, poissons)</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Dernière date de passage du vétérinaire :</h3>
+                            <p>Le 22/07/2024</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Avis du vétérinaire :</h3>
+                            <p>Tigra est en forme.</br>
+                                Sa grossesse se déroule très bien</br>
+                                et elle est très surveillée.</p>
+                        </div></hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="collapse multi-collapse" id="elephants">
+                <h3 class="bg_green text-white p-4">Nos éléphants</h3>
+                <div class="card card-body bg_dark text-white">
+
+                    <div class="image-card text-white">
+                        <img src="{{ asset('images/Phanto.jpg')}}" class="rounded w-100" style="max-width: 300px; max-height: 200px"/>
+                        <h5 class="titre-image text-white">Phanto</h5>
+                        <div class="">
+                            <p>Éléphant d'Asie</br>
+                            Forêt</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">État de l'animal</h3>
+                            <p>Phanto a 4 ans et se porte à merveille.</br>
+                                Il est très actif, très joueur et adore taquiner</br>
+                                sa chère et tendre, Fanta.</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Nourriture</h3>
+                            <p>Herbivore.</br>
+                            Fruits, feuilles et fleurs</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Dernière date de passage du vétérinaire :</h3>
+                            <p>Le 22/07/2024</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Avis du vétérinaire :</h3>
+                            <p>Phanto se porte très bien.</br>
+                                Son régime alimentaire lui convient parfaitement.</br>
+                                Il est physiquement en grande forme.</br>
+                                Il ne nécessite aucun soin particulier.</p>
+                        </div></hr>
+                    </div>
+
+                    <div class="image-card text-white">
+                        <img src="{{ asset('images/Fanta.jpg')}}" class="rounded w-100" style="max-width: 300px; max-height: 200px"/>
+                        <h5 class="titre-image text-white">Fanta</h5>
+                        <div class="">
+                            <p>Éléphant d'Asie</br>
+                            Forêt</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">État de l'animal</h3>
+                            <p>Fanta a 3 ans et est en très bonne santé.</br>
+                                Elle attend un très heureux événement,</br>
+                                le premier petit élépahnteau du Zoo Arcadia !</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Nourriture</h3>
+                            <p>Herbivore. </br>
+                            Fruits, feuilles et fleurs</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Dernière date de passage du vétérinaire :</h3>
+                            <p>Le 22/07/2024</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Avis du vétérinaire :</h3>
+                            <p>Fanta est en forme.</br>
+                                Sa grossesse se déroule très bien</br>
+                                et elle est très surveillée.</p>
+                        </div></hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center">
+    <a class="btn bg_primary text-white m-4" href="/habitats">Retour à la page des habitats</a>
+</div>
+
+{% endblock %}

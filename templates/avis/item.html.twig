@@ -1,0 +1,31 @@
+<li class="row border-bottom">
+    <div class="col">
+        <p>{{ avis.pseudo }}</p>
+    </div>
+    <div class="col">
+        <button class="btn bg_primary text-white mt-2" type="button" data-bs-toggle="modal" data-bs-target="#avis-modal-{{ avis.id }}">Ouvrir</button>
+    </div>
+        
+
+        <!-- Modal -->
+        <div class="modal fade text-black" id="avis-modal-{{ avis.id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header row">
+                <h1 class="col modal-title fs-5 text-center" id="exampleModalLabel"> {{ avis.pseudo }}</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-start">
+                <div class="row">
+                    {{ avis.avis }}
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Valider</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Supprimer</button>
+            </div>
+            </div>
+        </div>
+        </div>
+    
+</li>

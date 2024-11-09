@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Rapports Vétérinaires{% endblock %}
+
+{% block content %}
+
+
+<div class="text-center m-4">
+    <h1>Rapports Vétérinaires</h1>
+</div>
+
+ <div class="container">
+        <div class="row bg_dark text-white text-center">
+        {% for rapportveterinaire in rapportveterinaires %}
+            <li class="row border-bottom">
+                <div class="col">
+                    <p>{{ rapportveterinaire.date|date('d/m/Y') }} -- {{ rapportveterinaire.animal }}</p>
+                </div>
+                <div class="col">
+                    <button class="btn bg_primary text-white mt-2" type="button" data-bs-toggle="modal" data-bs-target="#rapportVet-modal-{{ rapportveterinaire.id }}">Ouvrir</button>
+                </div>
+        
+
+        <!-- Modal -->
+                <div class="modal fade text-black" id="rapportVet-modal-{{ rapportveterinaire.id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header row">
+                            <h1 class="col modal-title fs-5 text-center" id="exampleModalLabel"> {{ rapportveterinaire.date|date('d/m/Y') }} -- {{ rapportveterinaire.animal }}</h1>
+                            <h4 class="col modal-title fs-5 text-center">Rédigé par {{ rapportveterinaire.user.prenom }}</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-start col">
+                            <div class="row">
+                                Race : {{ rapportveterinaire.getRaceLabel }}
+                            </div>
+                            <div class="row">
+                                Prénom de l'animal : {{ rapportveterinaire.animal }}
+                            </div>
+                            <div class="row">
+                                État général : {{ rapportveterinaire.etat }}
+                            </div>
+                            <div class="row">
+                                Nourriture donnée : {{ rapportveterinaire.nourriture }}
+                                Quantité : {{ rapportveterinaire.gramage }} gr
+                            </div>
+                            <div class="row">
+                                Informations détaillées : {{ rapportveterinaire.detail }}
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                            
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+
+                {% else %}
+                <p>Aucun enregistrement en base de données.</p> 
+            {% endfor %}
+        </div>
+    </div>
+
+
+
+
+
+
+{% endblock %} 

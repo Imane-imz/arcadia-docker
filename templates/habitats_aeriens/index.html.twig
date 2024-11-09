@@ -1,0 +1,259 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Habitats Aériens{% endblock %}
+
+{% block content %}
+
+ <!-- Header-->
+<header class="habitats-terrestres d-flex justify-content-center">
+    <div class="w-50 h-100">
+        <div class="row h-100 align-items-center">
+        <div class="col-12 text-center text-light glassmorphism p-2">
+            <p class="lead">Découvrez les animaux des habitats aériens du</p>
+            <h1 class="fw-light">Zoo Arcadia</h1>
+        </div>
+        </div>
+    </div>
+</header>
+
+<section class="bg-light text-center">
+    <div class="rectangle-text bg_dark">
+        <h1 class="text-white">Les animaux des habitats aériens du zoo</h1>
+    </div>
+</section>
+
+<div class="container text-center">
+
+    <p class="d-inline-flex gap-1">
+        <a class="btn" data-bs-toggle="collapse" href="#perroquets" role="button" aria-expanded="false" aria-controls="perroquets">
+            <img src="{{ asset('images/CouplePerroquets.jpg')}}" class="rounded w-100 img-fluid" style="object-fit: cover; max-height: 250px;"/>
+        </a>
+        <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#flamants" aria-expanded="false" aria-controls="flamants">
+            <img src="{{ asset('images/CoupleFlamants.jpg')}}" class="rounded w-100 img-fluid" style="object-fit: cover; max-height: 250px;"/>
+        </button>
+        <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#autruches" aria-expanded="false" aria-controls="autruches">
+            <img src="{{ asset('images/CoupleAutruches.jpg')}}" class="rounded w-100 img-fluid" style="object-fit: cover; max-height: 250px;"/>
+        </button>
+    </p>
+
+    <div class="row">
+        <div class="container">
+            <div class="collapse multi-collapse" id="perroquets">
+                <h3 class="bg_green text-white p-4">Nos perroquets</h3>
+                <div class="card card-body bg_dark text-white">
+
+                    <div class="image-card">
+                        <img src="{{ asset('images/Rocco.jpg')}}" class="rounded w-100" style="max-width: 300px; max-height: 200px"/>
+                        <h3 class="titre-image text-white">Rocco</h3>
+                        <div class="">
+                            <p>Ara Araraunas</br>
+                            Forêt tropicale et parlmeraie</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">État de l'animal</h3>
+                            <p>Rocco a 4 ans et se porte à merveille.</br>
+                            Il est très actif, très joueur et adore taquiner</br>
+                            sa chère et tendre, Rocca.</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Nourriture</h3>
+                            <p>Frugivore :</br>
+                            Fruits, noix de palme, graines, baies,</br>
+                            fleurs et feuilles d’arbres</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Dernière date de passage du vétérinaire :</h3>
+                            <p>Le 22/07/2024</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Avis du vétérinaire :</h3>
+                            <p>Rocco se porte très bien.</br>
+                                Son régime alimentaire lui convient parfaitement.</br>
+                                Il est physiquement en grande forme.</br>
+                                Il ne nécessite aucun soin particulier.</p>
+                        </div></hr>
+                    </div>
+
+
+
+                    <div class="image-card text-white">
+                        <img src="{{ asset('images/Rocca.jpg')}}" class="rounded w-100" style="max-width: 300px; max-height: 200px;"/>
+                        <h3 class="titre-image text-white">Rocca</h3>
+                        <p>Ara Araraunas</br>
+                        Forêt tropicale et parlmeraie</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">État de l'animal</h3>
+                            <p>Rocca a 3 ans et est en très bonne santé.</br>
+                                Elle attend un très heureux événement,</br>
+                                les premiers petits perroquets du Zoo Arcadia !</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Nourriture</h3>
+                            <p>Frugivore :</br>
+                            Fruits, noix de palme, graines, baies,</br>
+                            fleurs et feuilles d’arbres</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Dernière date de passage du vétérinaire :</h3>
+                            <p>Le 22/07/2024</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Avis du vétérinaire :</h3>
+                            <p>Rocca est en forme.</br>
+                                Son régime alimentaire lui convient parfaitement.</br>
+                                Sa grossesse se déroule très bien</br>
+                                et elle est très surveillée.</p>
+                        </div></hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="collapse multi-collapse" id="flamants">
+                <h3 class="bg_green text-white p-4">Nos flamants</h3>
+                <div class="card card-body bg_dark text-white">
+
+                    <div class="image-card">
+                        <img src="{{ asset('images/Flamo.jpg')}}" class="rounded w-100" style="max-width: 300px; max-height: 200px"/>
+                        <h3 class="titre-image text-white">Flamo</h3>
+                        <div class="">
+                            <p>Flamant du Chili</br>
+                            Lagune et marais salant</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">État de l'animal</h3>
+                            <p>Flamo a 4 ans et se porte à merveille.</br>
+                                Il est très actif, très joueur et adore taquiner</br>
+                                sa chère et tendre, Flama.</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Nourriture</h3>
+                            <p>Algues et invertébrés aquatiques,</br>
+                            crustacés, larves</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Dernière date de passage du vétérinaire :</h3>
+                            <p>Le 22/07/2024</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Avis du vétérinaire :</h3>
+                            <p>Flamo se porte très bien.</br>
+                                Son régime alimentaire lui convient parfaitement.</br>
+                                Il est physiquement en grande forme.</br>
+                                Il ne nécessite aucun soin particulier.</p>
+                        </div></hr>
+                    </div>
+
+                    <div class="image-card">
+                        <img src="{{ asset('images/Flama.jpg')}}" class="rounded w-100" style="max-width: 300px; max-height: 200px"/>
+                        <h3 class="titre-image text-white">Flama</h3>
+                        <div class="">
+                            <p>Flamant du Chili</br>
+                            Lagune et marais salant</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">État de l'animal</h3>
+                            <p>Flama a 3 ans et est en très bonne santé.</br>
+                                Elle attend un très heureux événement,</br>
+                                les premiers petits flamants du Zoo Arcadia !</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Nourriture</h3>
+                            <p>Algues et invertébrés aquatiques,</br>
+                            crustacés, larves</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Dernière date de passage du vétérinaire :</h3>
+                            <p>Le 22/07/2024</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Avis du vétérinaire :</h3>
+                            <p>Flama est en forme.</br>
+                                Sa grossesse se déroule très bien</br>
+                                et elle est très surveillée.</p>
+                        </div></hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="collapse multi-collapse" id="autruches">
+                <h3 class="bg_green text-white p-4">Nos autruches</h3>
+                <div class="card card-body bg_dark text-white">
+
+                    <div class="image-card text-white">
+                        <img src="{{ asset('images/Autro.jpg')}}" class="rounded w-100" style="max-width: 300px; max-height: 200px"/>
+                        <h3 class="titre-image text-white">Autro</h3>
+                        <div class="">
+                            <p>Autruche</br>
+                            Steppes et zones semi-désertiques</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">État de l'animal</h3>
+                            <p>Autro a 4 ans et se porte à merveille.</br>
+                                Il est très actif, très joueur et adore taquiner</br>
+                                sa chère et tendre, Autra.</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Nourriture</h3>
+                            <p>Omnivore - folivore.</br>
+                            Pousses, feuilles, fleurs, fruits.</br>
+                            Sauterelles et criquets.</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Dernière date de passage du vétérinaire :</h3>
+                            <p>Le 22/07/2024</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Avis du vétérinaire :</h3>
+                            <p>Autro se porte très bien.</br>
+                                Son régime alimentaire lui convient parfaitement.</br>
+                                Il est physiquement en grande forme.</br>
+                                Il ne nécessite aucun soin particulier.</p>
+                        </div></hr>
+                    </div>
+
+                    <div class="image-card text-white">
+                        <img src="{{ asset('images/Autra.jpg')}}" class="rounded w-100" style="max-width: 300px; max-height: 200px"/>
+                        <h3 class="titre-image text-white">Autra</h3>
+                        <div class="">
+                            <p>Autruche</br>
+                            Steppes et zones semi-désertiques</p
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">État de l'animal</h3>
+                            <p>Autra a 3 ans et est en très bonne santé.</br>
+                                Elle attend un très heureux événement,</br>
+                                les premiers petites autruches du Zoo Arcadia !</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Nourriture</h3>
+                            <p>Omnivore - folivore.</br>
+                            Pousses, feuilles, fleurs, fruits.</br>
+                            Sauterelles et criquets.</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Dernière date de passage du vétérinaire :</h3>
+                            <p>Le 22/07/2024</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Avis du vétérinaire :</h3>
+                            <p>Autra est en forme.</br>
+                                Sa grossesse se déroule très bien</br>
+                                et elle est très surveillée.</p>
+                        </div></hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center">
+    <a class="btn bg_primary text-white m-4" href="/habitats">Retour à la page des habitats</a>
+</div>
+
+{% endblock %}

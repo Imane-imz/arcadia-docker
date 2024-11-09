@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% set action = app.current_route == 'app_nourriture_new' ? 'Ajout' : 'Édition' %}
+
+{% block title %}{{ action }} de nourriture{% endblock %}
+
+{% block content %}
+
+<div class="w-50 m-auto m-4">
+    <div class="example-wrapper">
+        <h1 class="d-flex justify-content-center">Nourriture des animaux</h1> 
+            {{ form_start(form, {'attr': {'enctype': 'multipart/form-data'}}) }}
+                {{ form_row(form.animal, {label: 'Animal'}) }}
+                {{ form_row(form.nourriture, {label: 'Nourriture'}) }}
+                {{ form_row(form.quantite, {label: 'Quantité'}) }}
+                {{ form_row(form.date, {label: 'Date'}) }}
+                {{ form_row(form.confirmation) }}
+            {{ form_widget(form) }}
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn bg_primary text-white">Valider</button>
+            </div>
+            {{ form_end(form) }}
+    </div>
+</div>
+{% endblock %}

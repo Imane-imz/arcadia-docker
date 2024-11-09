@@ -1,0 +1,211 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Zoo Arcadia{% endblock %}
+
+{% block content %}
+    <!-- Header-->
+    <header class="masthead d-flex justify-content-center">
+    <div class="w-50 h-100">
+        <div class="row h-100 align-items-center">
+        <div class="col-12 text-center text-light glassmorphism p-2">
+            <p class="lead">Découvrez l’harmonie entre la nature et la biodiversité au</p>
+            <h1 class="fw-light">Zoo Arcadia</h1>
+            <a class="btn bg_primary text-white" href="#avis">Lire les avis</a>
+        </div>
+        </div>
+    </div>
+</header>
+    
+    
+<section class="presentation">
+    <div class="container">
+        <div class="text-center">
+            <p>Le Zoo Arcadia s'engage passionnément envers l'écologie et le bien-être animal. 
+            Niché au cœur d'un environnement préservé, notre refuge offre un havre de bonheur pour nos précieux résidents, 
+            tout en inspirant nos visiteurs à préserver et à apprécier la beauté de la nature.</p>
+        </div>
+    </div>
+</section>
+    
+    <section class="bg-light text-center" id="habitats">
+        <div class="rectangle-text bg_dark" id="habitats">
+            <h1 class="text-white">Les habitats du zoo</h1>
+        </div>
+
+        <div>
+            <a class="btn bg_primary text-white m-4" href="/admin/habitat">Découvrez les habitats du zoo Arcadia</a>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4 p-3">
+                    <div class="image-card text-white">
+                        <img src="{{ asset('images/HabitatTerrestreSuricate.jpg')}}" class="rounded w-100 img-fluid" style="object-fit: cover; max-height: 250px;"/>
+                        <h2 class="titre-image">Les habitats terrestres</h2>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 p-3">
+                    <div class="image-card text-white">
+                        <img src="{{ asset('images/HabitatAquatique.jpg')}}" class="rounded w-100 img-fluid" style="object-fit: cover; max-height: 250px;"/>
+                        <h2 class="titre-image">Les habitats aquatiques</h2>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 p-3">
+                    <div class="image-card text-white">
+                        <img src="{{ asset('images/HabitatAerien.jpg')}}" class="rounded w-100 img-fluid" style="object-fit: cover; max-height: 250px;"/>
+                        <h2 class="titre-image">Les habitats aériens</h2>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </section>
+
+    <section class=" text-center">
+        <div class="rectangle-text bg_dark" id="services">
+            <h1 class="text-white">Les services du zoo</h1>
+        </div>
+
+        <div>
+            <a class="btn bg_primary text-white m-4" href="/admin/service">Découvrez les services du zoo Arcadia</a>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4 p-3">
+                    <div class="image-card text-white">
+                        <img src="{{ asset('images/Restaurant1.jpg')}}" class="rounded w-100" style="object-fit: cover; max-height: 250px;"/>
+                        <h2 class="titre-image">Restauration</h2>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 p-3">
+                    <div class="image-card text-white">
+                        <img src="{{ asset('images/Visite1.jpg')}}" class="rounded w-100" style="object-fit: cover; max-height: 250px;"/>
+                        <h2 class="titre-image">Visites des habitats</h2>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 p-3">
+                    <div class="image-card text-white">
+                        <img src="{{ asset('images/Train1.jpg')}}" class="rounded w-100" style="object-fit: cover; max-height: 250px;"/>
+                        <h2 class="titre-image">Visite en petit train</h2>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </section>
+
+    <section class="text-center">
+        <div class="rectangle-text bg_dark" id="avis">
+        <h1 class="text-white">Les avis</h1>
+    </div>
+
+<section>
+    <div class="container" id="avis">
+        <div class="row m-4"> 
+            <div class="col-12 col-md-6 col-lg-4">           
+                <div class="card bg_light m-2">
+                    <div class="image-card">
+                        <p class="titre-image text-center">
+                        <i class="bi bi-star-fill color-primary"></i>
+                        <i class="bi bi-star-fill color-primary"></i>
+                        <i class="bi bi-star-fill color-primary"></i>
+                        <i class="bi bi-star-fill color-primary"></i>
+                        <i class="bi bi-star-fill color-primary"></i></br></br>
+                            <b>Pseudo 1</b></br></br>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                        </p>
+                    </div>
+                </div> 
+            </div> 
+
+            <div class="col-12 col-md-6 col-lg-4"> 
+                <div class="card bg_light m-2">
+                    <div class="image-card">
+                        <p class="titre-image text-center">
+                        <i class="bi bi-star-fill color-primary"></i>
+                        <i class="bi bi-star-fill color-primary"></i>
+                        <i class="bi bi-star-fill color-primary"></i>
+                        <i class="bi bi-star-fill color-primary"></i>
+                        <i class="bi bi-star-fill color-primary"></i></br></br>
+                            <b>Pseudo 2</b></br></br>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                        </p>
+                    </div>
+                </div>
+            </div>  
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card bg_light m-2">
+                    <div class="image-card">
+                        <p class="titre-image text-center">
+                        <i class="bi bi-star-fill color-primary"></i>
+                        <i class="bi bi-star-fill color-primary"></i>
+                        <i class="bi bi-star-fill color-primary"></i>
+                        <i class="bi bi-star-fill color-primary"></i>
+                        <i class="bi bi-star-fill color-primary"></i></br></br>
+                            <b>Pseudo 3</b></br></br>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                        </p>
+                    </div>
+                </div> 
+            </div>
+            
+            <div>
+                <a class="color-primary mb-2" href="/avis">Voir plus d'avis</a>
+            </div> 
+            <div>
+                <a class="btn bg_primary text-white p-2 m-2" href="/avis/new">Laisser un avis</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="contact" class="bg_dark text-white d-flex flex-column justify-content-center w-100">
+    <div class="rectangle-text bg_dark" id="contacter">
+        <h1 class="text-white">Contacter le zoo</h1>
+    </div>
+</section>
+
+<div class="container px-5 my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card border-0 rounded-3 shadow-lg">
+                <div class="card-body p-4">
+  
+                    <form id="contactForm">
+
+                    <!-- Email Input -->
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="emailInput" type="text" placeholder="Entrez votre adresse email" data-sb-validations="required" />
+                        <label for="name">Adresse email</label>
+                        <div class="invalid-feedback" data-sb-feedback="titreInput:required">Ce champ ne peut pas être vide.</div>
+                    </div>
+        
+                    <!-- Name Input -->
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="titreInput" type="text" placeholder="Entrez le titre de votre message" data-sb-validations="required" />
+                        <label for="name">Titre du message</label>
+                        <div class="invalid-feedback" data-sb-feedback="titreInput:required">Ce champ ne peut pas être vide.</div>
+                    </div>
+        
+                    <!-- Message Input -->
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" id="messageInput" type="text" placeholder="Veuillez écrire votre message ici" style="height: 10rem;" data-sb-validations="required"></textarea>
+                        <label for="messageInput">Votre message</label>
+                        <div class="invalid-feedback" data-sb-feedback="messageInput:required">Ce champ ne peut pas être vide.</div>
+                    </div>
+        
+        
+                    <!-- Submit button -->
+                    <div class="d-grid">
+                        <button class="btn bg_primary btn-lg text-white" id="submitButton" type="submit">Envoyer le message</button>
+                    </div>
+                    </form>
+  
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

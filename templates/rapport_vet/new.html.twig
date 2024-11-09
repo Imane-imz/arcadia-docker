@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% set action = app.current_route == 'app_admin_rapport_new' ? 'Ajout' : 'Édition' %}
+
+{% block title %}{{ action }} de rapport vétérinaire{% endblock %}
+
+{% block content %}
+
+<div class="w-50 m-auto m-4">
+    <div class="example-wrapper">
+        <h1 class="d-flex justify-content-center">Nouveau Rapport Vétérinaire</h1> 
+            {{ form_start(form, {'attr': {'enctype': 'multipart/form-data'}}) }}
+                {{ form_row(form.animal, {label: 'Animal'}) }}
+                {{ form_row(form.etat, {label: 'État général'}) }}
+                {{ form_row(form.nourriture, {label: 'Nourriture'}) }}
+                {{ form_row(form.gramage, {label: 'Gramage'}) }}
+                {{ form_row(form.date, {label: 'Date de passage'}) }}
+                {{ form_row(form.detail, {label: 'Détails sur l\'état de l\'animal'}) }}
+                {{ form_row(form.confirmation) }}
+            {{ form_widget(form) }}
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn bg_primary text-white">Valider</button>
+            </div>
+            {{ form_end(form) }}
+    </div>
+</div>
+{% endblock %}

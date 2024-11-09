@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{Détail des services}{% endblock %}
+
+{% block content %}
+
+<div class="example-wrapper ">
+    <h1 class="d-flex justify-content-center p-4">{{service.nom}}</h1>
+        {% if service is not null %}
+            <div class="container col">
+                    <div class="card mb-1 m-auto">
+                        <div class="card-body">
+                            <div class="row card-title d-flex justify-content-center">
+                                <h4 class="mb-1 row d-flex justify-content-center mb-4">{{ service.nom }}</h4>
+                                <img src="{{ asset('uploads/services/' ~ service.image) }}" class="image-show" alt="..." {# style="height:300px; width:600px" #}>
+                                <p class="row text-center p-4">{{ service.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+              </div>  
+        {% else %}
+            <div>Service non trouvé</div>
+        {% endif %}
+    <div class="d-flex justify-content-center p-4">
+    <a href="{{ path('app_admin_service_index') }}" class="btn bg_primary text-white m-2">Retour</a>
+
+    {% if is_granted('ROLE_ADMIN') or is_granted('ROLE_EMPLOYEE') %}
+    <a href="{{ path('app_admin_service_edit', {id: service.id}) }}" class="btn bg_green text-white m-2">Éditer</a>
+
+    <form action="{{ path('app_admin_service_delete', {'id': service.id}) }}" method="post" style="display:inline;">
+        <input type="hidden" name="_method" value="DELETE"> <!-- Ce champ force la méthode DELETE -->
+        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ service.id) }}">
+        <button type="submit" class="btn btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce service ?');">
+            Supprimer
+        </button>
+    </form>
+    {% endif %}
+
+    </div>
+</div>
+
+{% endblock %}

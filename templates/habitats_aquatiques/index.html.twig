@@ -1,0 +1,260 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Habitats Aquatiques{% endblock %}
+
+{% block content %}
+
+ <!-- Header-->
+<header class="habitats-aquatiques d-flex justify-content-center">
+    <div class="w-50 h-100">
+        <div class="row h-100 align-items-center">
+        <div class="col-12 text-center text-light glassmorphism p-2">
+            <p class="lead">Découvrez les animaux des habitats aquatiques du</p>
+            <h1 class="fw-light">Zoo Arcadia</h1>
+        </div>
+        </div>
+    </div>
+</header>
+
+<section class="bg-light text-center">
+    <div class="rectangle-text bg_dark">
+        <h1 class="text-white">Les animaux des habitats aquatiques du zoo</h1>
+    </div>
+</section>
+
+<div class="container text-center">
+
+    <p class="d-inline-flex gap-1">
+        <a class="btn" data-bs-toggle="collapse" href="#tortues" role="button" aria-expanded="false" aria-controls="tortues">
+            <img src="{{ asset('images/CoupleTortues.jpg')}}" class="rounded w-100 img-fluid" style="object-fit: cover; max-height: 250px;"/>
+        </a>
+        <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#loutres" aria-expanded="false" aria-controls="loutres">
+            <img src="{{ asset('images/CoupleLoutres.jpg')}}" class="rounded w-100 img-fluid" style="object-fit: cover; max-height: 250px;"/>
+        </button>
+        <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#alligators" aria-expanded="false" aria-controls="alligators">
+            <img src="{{ asset('images/CoupleAlligator.jpg')}}" class="rounded w-100 img-fluid" style="object-fit: cover; max-height: 250px;"/>
+        </button>
+    </p>
+
+    <div class="row">
+        <div class="container">
+            <div class="collapse multi-collapse" id="tortues">
+                <h3 class="bg_green text-white p-4">Nos tortues</h3>
+                <div class="card card-body bg_dark text-white">
+
+                    <div class="image-card">
+                        <img src="{{ asset('images/Torto.jpg')}}" class="rounded w-100" style="max-width: 300px; max-height: 200px"/>
+                        <h3 class="titre-image text-white">Torto</h3>
+                        <div class="">
+                            <p>Tortue aquatique</br>
+                            Eau douce</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">État de l'animal</h3>
+                            <p>Torto a 4 ans et se porte à merveille.</br>
+                                Il est très actif, très joueur et adore taquiner</br>
+                                sa chère et tendre, Torta.</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Nourriture</h3>
+                            <p>Omnivore :</br>
+                                végétaux, insectes, aliments pour</br>
+                                tortues aquatiques.</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Dernière date de passage du vétérinaire :</h3>
+                            <p>Le 22/07/2024</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Avis du vétérinaire :</h3>
+                            <p>Torto se porte très bien.</br>
+                                Son régime alimentaire lui convient parfaitement.</br>
+                                Il est physiquement en grande forme.</br>
+                                Il ne nécessite aucun soin particulier.</p>
+                        </div></hr>
+                    </div>
+
+
+
+                    <div class="image-card text-white">
+                        <img src="{{ asset('images/Torta.jpg')}}" class="rounded w-100" style="max-width: 300px; max-height: 200px;"/>
+                        <h3 class="titre-image text-white">Torta</h3>
+                        <p>Tortue aquatique</br>
+                        Eau douce</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">État de l'animal</h3>
+                            <p>Torta a 3 ans et est en très bonne santé.</br>
+                            Elle attend un très heureux événement,</br>
+                            les premiers petites tortues du Zoo Arcadia !</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Nourriture</h3>
+                            <p>Omnivore :</br>
+                            végétaux, insectes, aliments pour</br>
+                            tortues aquatiques.</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Dernière date de passage du vétérinaire :</h3>
+                            <p>Le 22/07/2024</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Avis du vétérinaire :</h3>
+                            <p>Torta est en forme.</br>
+                            Sa grossesse se déroule très bien</br>
+                            et elle est très surveillée.</p>
+                        </div></hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container row">
+            <div class="collapse multi-collapse" id="loutres">
+                <h3 class="bg_green text-white p-4">Nos loutres</h3>
+                <div class="card card-body bg_dark text-white">
+
+                    <div class="col">
+                        <div class="image-card">
+                            <img src="{{ asset('images/Loutro.jpg')}}" class="rounded w-100" style="max-width: 300px; max-height: 200px"/>
+                            <h3 class="titre-image text-white">Loutro</h3>
+                            <div class="">
+                                <p>Loutre à pelage lisse</br>
+                                Mangroves, forêts marécageuses</p>
+                            </div></hr>
+                            <div>
+                                <h3 class="text-decoration-underline">État de l'animal</h3>
+                                <p>Loutro a 4 ans et se porte à merveille.</br>
+                                    Il est très actif, très joueur et adore taquiner</br>
+                                    sa chère et tendre, Loutra.</p>
+                            </div></hr>
+                            <div>
+                                <h3 class="text-decoration-underline">Nourriture</h3>
+                                <p>Carnivore :</br>
+                                Poissons, invertébrés et petits mammifères</p>
+                            </div></hr>
+                            <div>
+                                <h3 class="text-decoration-underline">Dernière date de passage du vétérinaire :</h3>
+                                <p>Le 22/07/2024</p>
+                            </div></hr>
+                            <div>
+                                <h3 class="text-decoration-underline">Avis du vétérinaire :</h3>
+                                <p>Loutro se porte très bien.</br>
+                                    Son régime alimentaire lui convient parfaitement.</br>
+                                    Il est physiquement en grande forme.</br>
+                                    Il ne nécessite aucun soin particulier.</p>
+                            </div></hr>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="image-card">
+                            <img src="{{ asset('images/Loutra.jpg')}}" class="rounded w-100" style="max-width: 300px; max-height: 200px"/>
+                            <h3 class="titre-image text-white">Loutra</h3>
+                            <div class="">
+                                <p>Loutre à pelage lisse</br>
+                                Mangroves, forêts marécageuses</p>
+                            </div></hr>
+                            <div>
+                                <h3 class="text-decoration-underline">État de l'animal</h3>
+                                <p>Loutra a 3 ans et est en très bonne santé.</br>
+                                    Elle attend un très heureux événement,</br>
+                                    le premier petit loutre du Zoo Arcadia !</p>
+                            </div></hr>
+                            <div>
+                                <h3 class="text-decoration-underline">Nourriture</h3>
+                                <p>Carnivore :</br>
+                                Poissons, invertébrés et petits mammifères</p>
+                            </div></hr>
+                            <div>
+                                <h3 class="text-decoration-underline">Dernière date de passage du vétérinaire :</h3>
+                                <p>Le 22/07/2024</p>
+                            </div></hr>
+                            <div>
+                                <h3 class="text-decoration-underline">Avis du vétérinaire :</h3>
+                                <p>Loutra est en forme.</br>
+                                    Sa grossesse se déroule très bien</br>
+                                    et elle est très surveillée.</p>
+                            </div></hr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="collapse multi-collapse" id="alligators">
+                <h3 class="bg_green text-white p-4">Nos alligators</h3>
+                <div class="card card-body bg_dark text-white">
+
+                    <div class="image-card text-white">
+                        <img src="{{ asset('images/Gator.jpg')}}" class="rounded w-100" style="max-width: 300px; max-height: 200px"/>
+                        <h3 class="titre-image text-white">Gator</h3>
+                        <div class="">
+                            <p>Alligator</br>
+                            Mangroves, rivières</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">État de l'animal</h3>
+                            <p>Gator a 4 ans et se porte à merveille.</br>
+                                Il est très actif, très joueur et adore taquiner</br>
+                                sa chère et tendre, Gatora.</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Nourriture</h3>
+                            <p>Carnivore :</br>
+                            Poissons, gnous, zèbres, antilopes</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Dernière date de passage du vétérinaire :</h3>
+                            <p>Le 22/07/2024</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Avis du vétérinaire :</h3>
+                            <p>Gator se porte très bien.</br>
+                                Son régime alimentaire lui convient parfaitement.</br>
+                                Il est physiquement en grande forme.</br>
+                                Il ne nécessite aucun soin particulier.</p>
+                        </div></hr>
+                    </div>
+
+                    <div class="image-card text-white">
+                        <img src="{{ asset('images/Gatora.jpg')}}" class="rounded w-100" style="max-width: 300px; max-height: 200px"/>
+                        <h3 class="titre-image text-white">Gatora</h3>
+                        <div class="">
+                            <p>Alligator</br>
+                            Mangroves, rivières</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">État de l'animal</h3>
+                            <p>Gatora a 3 ans et est en très bonne santé.</br>
+                                Elle attend un très heureux événement,</br>
+                                les premiers petits alligators du Zoo Arcadia !</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Nourriture</h3>
+                            <p>Carnivore : </br>
+                            Poissons, gnous, zèbres, antilopes</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Dernière date de passage du vétérinaire :</h3>
+                            <p>Le 22/07/2024</p>
+                        </div></hr>
+                        <div>
+                            <h3 class="text-decoration-underline">Avis du vétérinaire :</h3>
+                            <p>Gatora est en forme.</br>
+                                Sa grossesse se déroule très bien</br>
+                                et elle est très surveillée.</p>
+                        </div></hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center m-4">
+    <a class="btn bg_primary text-white" href="/habitats">Retour à la page des habitats</a>
+</div>
+
+{% endblock %}

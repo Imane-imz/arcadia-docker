@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Messages{% endblock %}
+
+{% block content %}
+
+<div class="text-center m-4">
+    <h1>Messages</h1>
+
+    <div class="container">
+        <div class="row">
+        {% for message in messages %}
+            <div class="col-12 col-md-6 col-lg-4 p-3">
+                <div class="card">
+                        <div class="card-body">
+                            <h3 class="mb-1">{{ message.email }}</h3>
+                            <p class="mb-1">{{ message.message }}</p>
+                            {# <a href="{{ path('app_message_show', {id: message.id}) }}" class="btn bg_primary text-white m-2">En savoir plus</a> #}
+                        </div>
+                </div>
+            </div>
+                {% else %}
+                <p>Aucun enregistrement en base de données.</p> 
+            {% endfor %}
+        </div>
+    </div>
+
+    <div>
+        <a class="btn bg_primary text-white m-4" href="service/new">Ajouter une nouvelle activité</a>
+    </div>
+
+</div>
+{% endblock %}

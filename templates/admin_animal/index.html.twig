@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les habitats du zoo{% endblock %}
+
+{% block content %}
+
+<div class="text-center m-4">
+    <h1>Les habitats du zoo Arcadia</h1>
+
+    <div class="container">
+        <div class="row">
+        {% for habitat in habitats %}
+            <div class="col-12 col-md-6 col-lg-4 p-2">
+                <div class="card">
+                    <img src="{{ asset('uploads/habitats/images/' ~ habitat.image) }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <a href="{{ path('app_admin_habitat_show', {id: habitat.id}) }}" class="mb-1 h4 text-decoration-none">{{ habitat.nom }}</a>
+                            {# <a href="{{ path('app_admin_habitat_show', {id: habitat.id}) }}" class="btn bg_primary text-white m-2">Voir les animaux des {{ habitat.nom }}</a> #} 
+                        </div>
+                </div>
+            </div>
+                {% else %}
+                <p>Aucun enregistrement en base de données.</p> 
+            {% endfor %}
+        </div>
+    </div>
+
+    {% if is_granted('ROLE_ADMIN') or is_granted('ROLE_EMPLOYEE') %}
+    <div>
+        <a class="btn bg_primary text-white m-4" href="habitat/new">Ajouter un nouvel habitat</a>
+    </div>
+    {% endif %}
+
+</div>
+{% endblock %} 

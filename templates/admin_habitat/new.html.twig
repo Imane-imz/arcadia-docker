@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% set action = app.current_route == 'app_admin_habitat_new' ? 'Ajout' : 'Édition' %}
+
+{% block title %}{{ action }} d'habitats{% endblock %}
+
+{% block content %}
+
+    <div class="w-50 m-auto">
+        <div class="example-wrapper">
+            <h1 class="d-flex justify-content-center">Ajout d'habitats</h1>
+                
+                    {{ form_start(form, {'attr': {'enctype': 'multipart/form-data'}}) }}
+                        {{ form_row(form.nom, {label: 'Nom de l\'habitat'}) }}
+                        {{ form_row(form.description, {label: 'Description de l\'habitat'}) }}
+                        {{ form_row(form.confirmation) }}
+                    {{ form_widget(form) }}
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn bg_primary text-white">Valider</button>
+                    </div>
+                    {{ form_end(form) }}
+                 
+           
+        </div>
+    </div>
+{% endblock %}
